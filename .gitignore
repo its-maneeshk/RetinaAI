@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+dist/
+frontend/dist/
+
+# Environment variables
+.env
+frontend/.env
+backend/.env
+
+# Python
+__pycache__/
+*.pyc
+backend/__pycache__/
+
+# Virtual environment
+backend/venv/
+
+# # Model files
+# backend/diabetic_retinopathy.keras
+# *.keras
+# backend/model.keras
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+.venv/
+backend/env/
+backend/.venv
