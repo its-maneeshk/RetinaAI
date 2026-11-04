@@ -1,0 +1,17 @@
+RETINAAI DATASET INSTRUCTIONS — RESEARCH ONLY
+
+No patient dataset is included in this repository. The generated image in public/images is a synthetic illustration, not a clinical training sample. Preloaded database examples are synthetic fixtures, not analyzed patient images.
+
+1. Investigate the official sources:
+   APTOS 2019: https://www.kaggle.com/competitions/aptos2019-blindness-detection
+   EyePACS: https://www.kaggle.com/competitions/diabetic-retinopathy-detection
+   Messidor-2: https://www.adcis.net/en/third-party/messidor2/
+2. Accept the relevant access conditions and confirm research, redistribution, and model-weight permissions. Public availability is not public-domain licensing.
+3. Preserve provenance and authorized label versions. Confirm the mapping: 0 No DR; 1 Mild DR; 2 Moderate DR; 3 Severe DR; 4 Proliferative DR.
+4. For the included notebook, attach an authorized APTOS-style dataset to Kaggle with train.csv and train_images/<id_code>.png. Change the clearly named configuration values for other datasets.
+5. The expected label columns are id_code and diagnosis; an optional patient_id enables patient-grouped splitting. Both eyes, repeat images, and duplicates must remain in one split. Do not invent patient IDs.
+6. The notebook checks label ranges, files, split disjointness, class representation, and class imbalance before training. Missing patient identifiers are an explicit image-level-split limitation.
+7. Keep data outside this Git repository. Never upload real patient data into this shared synthetic-only application. Do not bypass institutional privacy or ethics requirements.
+8. Model serving expects EXIF-oriented RGB, center-square crop, Pillow LANCZOS resize to 224x224, float32 0-255, and model-embedded normalization. Keep training and inference identical.
+9. Export retina_dr_model.keras with five softmax scores. Save a model card, class mapping, preprocessing metadata, library versions, and honest held-out evaluation. A trained model is not a clinically validated device.
+10. Follow KAGGLE_TRAINING_GUIDE.md for the full split, evaluation, model replacement, and integration procedure. The dummy model has no clinical meaning.

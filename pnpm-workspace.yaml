@@ -1,0 +1,6 @@
+pmOnFail: ignore
+
+minimumReleaseAgeExclude:
+  - '@next/*'
+  - next
+  - '@vitejs/plugin-react@6.2.1'
